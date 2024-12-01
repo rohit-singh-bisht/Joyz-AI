@@ -19,6 +19,8 @@ var page = {
       page.loadAndInjectTemplate("section/try-it-out-section.html", "try_it");
       page.loadAndInjectTemplate("section/features.html", "features");
       page.loadAndInjectTemplate("section/pricing.html", "pricing");
+      page.loadAndInjectTemplate("section/faq.html", "faq");
+      page.loadAndInjectTemplate("layout/footer-template.html", "footer");
     });
   },
 };

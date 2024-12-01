@@ -162,31 +162,55 @@ header {
     align-items: center;
     flex-direction: column;
     gap: 2.4rem;
-    .pricing__title{
-        display: flex;
-        gap: 0.4rem;
-        color: var(--dark-600);
-        font-size: 2.4rem;
-        font-weight: 600;
-        margin-bottom: 0.8rem;
-        span{
-            color: var(--grey-300);
-        }
+    .pricing__title {
+      display: flex;
+      gap: 0.4rem;
+      color: var(--dark-600);
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      span {
+        color: var(--grey-300);
+      }
     }
-    .pricing__subtitle{
-        font-size: 1.8rem;
-        display: flex;
-        gap: 0.8rem;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0.4rem;
-        .beta{
-            display: inline-block;
-            padding: 0.4rem 0.8rem;
-            font-size: 1rem;
-            color: var(--grey-300);
-            background-color: var(--grey-50);
-        }
+    .pricing__subtitle {
+      font-size: 1.8rem;
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.4rem;
+      .beta {
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+        color: var(--grey-300);
+        background-color: var(--grey-50);
+      }
     }
   }
+}
+
+.faq__section {
+  .section_title {
+    margin-bottom: 4.8rem;
+  }
+}
+
+footer{
+    border-top: 1px solid var(--grey-100);
+    padding: 3.2rem 0 16rem;
+    text-align: center;
+    h2{
+        border-bottom: 1px solid var(--dark-600);
+        display: inline-block;
+    }
+    .footer__social{
+        margin-bottom: 4.8rem;
+    }
+    .footer__copymark{
+        text-align: center;
+        color: var(--grey-300);
+        font-size: 1.8rem;
+    }
 }
