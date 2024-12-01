@@ -14,8 +14,11 @@ var page = {
   },
   load: () => {
     document.addEventListener("DOMContentLoaded", () => {
-      console.log("here I am");
       page.loadAndInjectTemplate("layout/header-template.html", "header");
+      page.loadAndInjectTemplate("section/hero-section.html", "hero");
+      page.loadAndInjectTemplate("section/try-it-out-section.html", "try_it");
+      page.loadAndInjectTemplate("section/features.html", "features");
+      page.loadAndInjectTemplate("section/pricing.html", "pricing");
     });
   },
 };
