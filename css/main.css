@@ -1,0 +1,52 @@
+@import url("variable.scss");
+html,
+body {
+  font-size: 10px;
+}
+
+button {
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 0.8rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+button.dark {
+  background-color: var(--dark-500);
+  color: var(--grey-50);
+}
+button.tertiary {
+  border: 1px solid var(--dark-500);
+  color: var(--dark-500);
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 5.3rem;
+  font-weight: bold;
+  color: var(--dark-600);
+}
+
+header {
+  border-bottom: 1px solid var(--grey-100);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  gap: 0.8rem;
+  padding: 2.8rem 0;
+}
+.navbar-brand .logo_text span {
+  color: var(--grey-300);
+}
+.navbar-brand .logo_icon {
+  max-width: 4rem;
+}/*# sourceMappingURL=main.css.map */
