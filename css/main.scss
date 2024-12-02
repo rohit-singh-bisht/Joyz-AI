@@ -95,6 +95,9 @@ section {
 
 // COMMON CSS ENDS HERE
 
+
+// HOMEPAGE CSS
+
 header {
   border-bottom: 1px solid var(--grey-100);
 }
@@ -194,6 +197,26 @@ header {
 .faq__section {
   .section_title {
     margin-bottom: 4.8rem;
+  }
+  .faq__card{
+    padding: 1.6rem;
+    border-radius: 0.8rem;
+    margin-bottom: 0.8rem;
+    &.active{
+        border: 1px solid var(--grey-100);
+    }
+    .faq__card__header{
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    .faq__card__body{
+        font-size: 1.8rem;
+        padding-top: 0.8rem;
+        ul{
+            padding-left: 3rem;
+            margin-bottom: 0;
+        }
+    }
   }
 }
 
