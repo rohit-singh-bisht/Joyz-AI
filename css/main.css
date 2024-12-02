@@ -188,13 +188,26 @@ header {
   padding: 1.6rem;
   border-radius: 0.8rem;
   margin-bottom: 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.faq__section .faq__card::before {
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  float: right;
+  font-size: 1.4rem;
+  transition: all 0.2s;
 }
 .faq__section .faq__card.active {
   border: 1px solid var(--grey-100);
 }
+.faq__section .faq__card.active::before {
+  transform: rotate(180deg);
+}
 .faq__section .faq__card .faq__card__header {
   font-size: 1.6rem;
   font-weight: 500;
+  cursor: pointer;
 }
 .faq__section .faq__card .faq__card__body {
   font-size: 1.8rem;

@@ -18,41 +18,33 @@ const page = {
       page.loadAndInjectTemplate("section/try-it-out-section.html", "try_it");
       page.loadAndInjectTemplate("section/features.html", "features");
       page.loadAndInjectTemplate("section/pricing.html", "pricing");
-      page.loadAndInjectTemplate("section/faq.html", "faq");
+      //   page.loadAndInjectTemplate("section/faq.html", "faq");
+      faqAccordionManager.init();
     });
   },
 };
 
-// const faqAccordionManager = {
-//   init: () => {
-//     const collapsibleElements = document.querySelectorAll(
-//       ".faq__card .collapse"
-//     );
-//     collapsibleElements.forEach(faqAccordionManager.addListeners);
-//   },
+const faqAccordionManager = {
+  init: () => {
+    $(".faq__card .collapse").on("show.bs.collapse", function () {
+      faqAccordionManager.toggleActiveState(this, true);
+    });
 
-//   addListeners: (collapse) => {
-//     console.log("collapse", collapse);
-//     collapse.addEventListener("shown.bs.collapse", () => {
-//       faqAccordionManager.toggleActiveState(collapse, true);
-//     });
+    $(".faq__card .collapse").on("hide.bs.collapse", function () {
+      faqAccordionManager.toggleActiveState(this, false);
+    });
+  },
 
-//     collapse.addEventListener("hidden.bs.collapse", () => {
-//       faqAccordionManager.toggleActiveState(collapse, false);
-//     });
-//   },
-
-//   toggleActiveState: (collapseElement, isActive) => {
-//     const parentCard = collapseElement.closest("div");
-//     console.log("parent card", parentCard);
-//     if (parentCard) {
-//       if (isActive) {
-//         parentCard.classList.add("active");
-//       } else {
-//         parentCard.classList.remove("active");
-//       }
-//     }
-//   },
-// };
+  toggleActiveState: (collapseElement, isActive) => {
+    const parentCard = $(collapseElement).closest(".faq__card");
+    if (parentCard) {
+      if (isActive) {
+        parentCard.addClass("active");
+      } else {
+        parentCard.removeClass("active");
+      }
+    }
+  },
+};
 
 page.load();
