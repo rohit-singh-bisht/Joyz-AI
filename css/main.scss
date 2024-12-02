@@ -167,6 +167,8 @@ header {
     gap: 2.4rem;
     .pricing__title {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 0.4rem;
       color: var(--dark-600);
       font-size: 2.4rem;
@@ -220,6 +222,16 @@ header {
   }
 }
 
+.social__icons{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    .icon{
+        width: 24px;
+        height: 24px;
+    }
+}
+
 footer{
     border-top: 1px solid var(--grey-100);
     padding: 3.2rem 0 16rem;
@@ -227,6 +239,14 @@ footer{
     h2{
         border-bottom: 1px solid var(--dark-600);
         display: inline-block;
+        margin-bottom: 2.4rem !important;
+        a{
+            color: unset;
+            &:hover{
+                color: unset;
+                text-decoration: none;
+            }
+        }
     }
     .footer__social{
         margin-bottom: 4.8rem;
