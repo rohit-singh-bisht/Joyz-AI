@@ -285,6 +285,9 @@ footer .footer__copymark {
   background-color: var(--white);
   margin-right: auto;
 }
+.joyzAI__bot .joyzAI__bot__body ul {
+  padding-left: 2.8rem;
+}
 .joyzAI__bot .joyzAI__bot__response {
   background-color: var(--white);
   padding: 1.6rem;
