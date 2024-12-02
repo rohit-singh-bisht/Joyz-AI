@@ -125,6 +125,9 @@ header {
   align-items: center;
   gap: 1.6rem;
 }
+.hero__section .hero__chatbot {
+  margin: 1rem 0;
+}
 
 .features__wrapper {
   display: flex;
@@ -275,6 +278,7 @@ footer .footer__copymark {
   max-width: 80%;
   padding: 0.8rem;
   border-radius: 0.8rem;
+  font-family: "Outfit", sans-serif;
 }
 .joyzAI__bot .joyzAI__bot__body .incoming__msg {
   background-color: var(--grey-50);
