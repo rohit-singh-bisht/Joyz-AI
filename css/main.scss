@@ -137,10 +137,6 @@ header {
     align-items: center;
     gap: 1.6rem;
   }
-  .hero__banner {
-    box-shadow: 0 0 10rem 0.4rem rgba($color: #000000, $alpha: 0.1);
-    border-radius: 1.6rem;
-  }
 }
 
 .features__wrapper {
@@ -268,5 +264,78 @@ footer{
         text-align: center;
         color: var(--grey-300);
         font-size: 1.8rem;
+    }
+}
+
+
+// JOYZ AI BOT
+
+.joyzAI__bot{
+    box-shadow: 0 0 10rem 0.4rem rgba($color: #000000, $alpha: 0.1);
+    border-radius: 1.6rem;
+    overflow: hidden;
+    .joyzAI__bot__header{
+        padding: 1.6rem;
+        background-color: var(--grey-50);
+        width: 100%;
+    }
+    .joyzAI__bot__body{
+        background-color: var(--white);
+        padding: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        min-height: 350px;
+        width: 100%;
+        .msg{
+            font-size: 1.6rem;
+            display: inline-block;
+            max-width: 80%;
+            padding: 0.8rem;
+            border-radius: 0.8rem;
+        }
+        .incoming__msg{
+            background-color: var(--grey-50);
+            margin-left: auto;
+        }
+        .outgoing__msg{
+            border: 1px solid var(--grey-100);
+            background-color: var(--white);
+            margin-right: auto;
+        }
+    }
+    .joyzAI__bot__response{
+        background-color: var(--white);
+        padding: 1.6rem;
+        width: 100%;
+        .joyzAI__bot__input__wrapper{
+            position: relative;
+            input{
+                border: 1px solid var(--grey-100);
+                height: 45px;
+                font-size: 1.6rem;
+                padding: 0.8rem 4.5rem 0.8rem 1.2rem;
+                border-radius: 50px;
+                flex: 1;
+                width: 100%;
+                &:active, &:focus{
+                    outline: none;
+                }
+            }
+            .send__message__button{
+                width: 45px;
+                height: 45px;
+                border-radius: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                cursor: pointer;
+            }
+        }
+        
     }
 }
