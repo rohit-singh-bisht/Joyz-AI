@@ -95,7 +95,6 @@ section {
 
 // COMMON CSS ENDS HERE
 
-
 // HOMEPAGE CSS
 
 header {
@@ -137,7 +136,7 @@ header {
     align-items: center;
     gap: 1.6rem;
   }
-  .hero__chatbot{
+  .hero__chatbot {
     margin: 1rem 0;
   }
 }
@@ -199,152 +198,254 @@ header {
   .section_title {
     margin-bottom: 4.8rem;
   }
-  .faq__card{
+  .faq__card {
     padding: 1.6rem;
     border-radius: 0.8rem;
     margin-bottom: 0.8rem;
     border: 1px solid rgba($color: #000000, $alpha: 0);
-    &::before{
-        content: "\f078";
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 700;
-        float: right;
-        font-size: 1.4rem;
-        transition: all 0.2s;
+    &::before {
+      content: "\f078";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 700;
+      float: right;
+      font-size: 1.4rem;
+      transition: all 0.2s;
     }
-    &.active{
-        border: 1px solid var(--grey-100);
-        &::before{
-            transform: rotate(180deg);
-        }
+    &.active {
+      border: 1px solid var(--grey-100);
+      &::before {
+        transform: rotate(180deg);
+      }
     }
-    .faq__card__header{
-        font-size: 1.6rem;
-        font-weight: 500;
-        cursor: pointer;
+    .faq__card__header {
+      font-size: 1.6rem;
+      font-weight: 500;
+      cursor: pointer;
     }
-    .faq__card__body{
-        font-size: 1.8rem;
-        padding-top: 0.8rem;
-        ul{
-            padding-left: 3rem;
-            margin-bottom: 0;
-        }
+    .faq__card__body {
+      font-size: 1.8rem;
+      padding-top: 0.8rem;
+      ul {
+        padding-left: 3rem;
+        margin-bottom: 0;
+      }
     }
   }
 }
 
-.social__icons{
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    .icon{
-        width: 24px;
-        height: 24px;
-    }
+.social__icons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
 }
 
-footer{
-    border-top: 1px solid var(--grey-100);
-    padding: 3.2rem 0 16rem;
+footer {
+  border-top: 1px solid var(--grey-100);
+  padding: 3.2rem 0 16rem;
+  text-align: center;
+  h2 {
+    border-bottom: 1px solid var(--dark-600);
+    display: inline-block;
+    margin-bottom: 2.4rem !important;
+    a {
+      color: unset;
+      &:hover {
+        color: unset;
+        text-decoration: none;
+      }
+    }
+  }
+  .footer__social {
+    margin-bottom: 4.8rem;
+  }
+  .footer__copymark {
     text-align: center;
-    h2{
-        border-bottom: 1px solid var(--dark-600);
-        display: inline-block;
-        margin-bottom: 2.4rem !important;
-        a{
-            color: unset;
-            &:hover{
-                color: unset;
-                text-decoration: none;
-            }
-        }
-    }
-    .footer__social{
-        margin-bottom: 4.8rem;
-    }
-    .footer__copymark{
-        text-align: center;
-        color: var(--grey-300);
-        font-size: 1.8rem;
-    }
+    color: var(--grey-300);
+    font-size: 1.8rem;
+  }
 }
-
 
 // JOYZ AI BOT
 
-.joyzAI__bot{
-    box-shadow: 0 0 10rem 0.4rem rgba($color: #000000, $alpha: 0.1);
-    border-radius: 1.6rem;
-    overflow: hidden;
-    .joyzAI__bot__header{
-        padding: 1.6rem;
-        background-color: var(--grey-50);
-        width: 100%;
+.joyzAI__bot {
+  box-shadow: 0 0 10rem 0.4rem rgba($color: #000000, $alpha: 0.1);
+  border-radius: 1.6rem;
+  overflow: hidden;
+  .joyzAI__bot__header {
+    padding: 1.6rem;
+    background-color: var(--grey-50);
+    width: 100%;
+  }
+  .joyzAI__bot__body {
+    background-color: var(--white);
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    min-height: 350px;
+    width: 100%;
+    .msg {
+      font-size: 1.6rem;
+      display: inline-block;
+      max-width: 80%;
+      padding: 0.8rem;
+      border-radius: 0.8rem;
+      font-family: "Outfit", sans-serif;
     }
-    .joyzAI__bot__body{
-        background-color: var(--white);
-        padding: 1.6rem;
+    .incoming__msg {
+      background-color: var(--grey-50);
+      margin-left: auto;
+    }
+    .outgoing__msg {
+      border: 1px solid var(--grey-100);
+      background-color: var(--white);
+      margin-right: auto;
+    }
+    ul {
+      padding-left: 2.8rem;
+      margin-top: 1.2rem;
+      line-height: 2rem;
+    }
+  }
+  .joyzAI__bot__response {
+    background-color: var(--white);
+    padding: 1.6rem;
+    width: 100%;
+    .joyzAI__bot__input__wrapper {
+      position: relative;
+      input {
+        border: 1px solid var(--grey-100);
+        height: 45px;
+        font-size: 1.6rem;
+        padding: 0.8rem 4.5rem 0.8rem 1.2rem;
+        border-radius: 50px;
+        flex: 1;
+        width: 100%;
+        &:active,
+        &:focus {
+          outline: none;
+        }
+      }
+      .send__message__button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50px;
         display: flex;
-        flex-direction: column;
-        gap: 1.6rem;
-        min-height: 350px;
-        width: 100%;
-        .msg{
-            font-size: 1.6rem;
-            display: inline-block;
-            max-width: 80%;
-            padding: 0.8rem;
-            border-radius: 0.8rem;
-            font-family: "Outfit", sans-serif;
-        }
-        .incoming__msg{
-            background-color: var(--grey-50);
-            margin-left: auto;
-        }
-        .outgoing__msg{
-            border: 1px solid var(--grey-100);
-            background-color: var(--white);
-            margin-right: auto;
-        }
-        ul{
-            padding-left: 2.8rem;
-            margin-top: 1.2rem;
-            line-height: 2rem;
-        }
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        cursor: pointer;
+      }
     }
-    .joyzAI__bot__response{
+  }
+}
+
+// TRYOUT MODAL
+.form__modal__wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .form__modal {
+    padding: 6.4rem;
+    max-width: 90.5rem;
+    width: 90.5rem;
+    background-color: var(--white);
+    border: 1px solid var(--grey-300);
+    border-radius: 1.2rem;
+    box-shadow: 0 0 20px 5px rgba($color: #000000, $alpha: 0.1);
+    position: relative;
+    .modal__title {
+      font-size: 3.2rem;
+      margin-bottom: 1.6rem;
+    }
+    .modal__steps {
+      padding-left: 2.6rem;
+      font-size: 1.8rem;
+    }
+    .close__modal {
+      position: absolute;
+      top: 2.4rem;
+      right: 2.4rem;
+      cursor: pointer;
+    }
+  }
+}
+
+#surveyElement {
+  .sv-container-modern {
+    display: flex;
+    gap: 2.4rem;
+    & > div {
+      flex: 1;
+    }
+  }
+  .sv-page__title {
+      font-size: 3.2rem;
+      margin-bottom: 1.6rem;
+      font-weight: 700;
+  }
+  .sv-row {
+    margin-bottom: 2.4rem;
+  }
+  .sv-question__header {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .sv-action {
+    .sv-btn {
+      padding: 0rem 2.4rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      border-radius: 0.8rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s;
+      border-width: 0px;
+      outline: none;
+      background-color: var(--dark-500);
+      border: 1px solid var(--dark-500);
+      color: var(--grey-50);
+      margin: auto;
+      &:hover {
         background-color: var(--white);
-        padding: 1.6rem;
-        width: 100%;
-        .joyzAI__bot__input__wrapper{
-            position: relative;
-            input{
-                border: 1px solid var(--grey-100);
-                height: 45px;
-                font-size: 1.6rem;
-                padding: 0.8rem 4.5rem 0.8rem 1.2rem;
-                border-radius: 50px;
-                flex: 1;
-                width: 100%;
-                &:active, &:focus{
-                    outline: none;
-                }
-            }
-            .send__message__button{
-                width: 45px;
-                height: 45px;
-                border-radius: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                right: 0;
-                cursor: pointer;
-            }
-        }
-        
+        color: var(--dark-500);
+      }
     }
+  }
+  input {
+    &.sv-text {
+      border: 0px;
+      border-bottom: 1px solid var(--grey-75);
+      height: 2.4rem;
+      font-size: 1.4rem;
+      width: 100%;
+      padding: 0.4rem;
+      &:focus,
+      &.active {
+        outline: none;
+        border-bottom: 1px solid var(--grey-300);
+        &.sv-text--error {
+          border-bottom: 1px solid var(--red);
+        }
+      }
+    }
+    &.sv-text--error {
+      border-bottom: 1px solid var(--red);
+      margin-top: 0.8rem;
+    }
+  }
+  .sv-question__erbox {
+    color: var(--red);
+  }
 }

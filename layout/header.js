@@ -16,7 +16,7 @@ class AppHeader extends HTMLElement {
                 class="collapse navbar-collapse justify-content-end"
                 id="navbarSupportedContent"
             >
-                <button class="dark my-2 my-sm-0">Get my chatbot</button>
+                <button class="dark my-2 my-sm-0 opentryoutform">Get my chatbot</button>
             </div>
             </nav>
         </div>
