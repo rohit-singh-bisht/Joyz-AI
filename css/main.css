@@ -1,4 +1,8 @@
 @import url("variable.scss");
+* {
+  font-family: "Inter", sans-serif;
+}
+
 html,
 body {
   font-size: 10px;
@@ -349,10 +353,12 @@ footer .footer__copymark {
 .form__modal__wrapper .form__modal .modal__title {
   font-size: 3.2rem;
   margin-bottom: 1.6rem;
+  color: var(--dark-600);
 }
 .form__modal__wrapper .form__modal .modal__steps {
   padding-left: 2.6rem;
   font-size: 1.8rem;
+  color: var(--dark-600);
 }
 .form__modal__wrapper .form__modal .close__modal {
   position: absolute;
@@ -361,13 +367,6 @@ footer .footer__copymark {
   cursor: pointer;
 }
 
-#surveyElement .sv-container-modern {
-  display: flex;
-  gap: 2.4rem;
-}
-#surveyElement .sv-container-modern > div {
-  flex: 1;
-}
 #surveyElement .sv-page__title {
   font-size: 3.2rem;
   margin-bottom: 1.6rem;
@@ -377,8 +376,14 @@ footer .footer__copymark {
   margin-bottom: 2.4rem;
 }
 #surveyElement .sv-question__header {
+  margin-bottom: 0.4rem;
+}
+#surveyElement .sv-question__title {
   font-size: 1.2rem;
   font-weight: 400;
+}
+#surveyElement .sv-question__content {
+  margin-left: 0.5rem;
 }
 #surveyElement .sv-action .sv-btn {
   padding: 0rem 2.4rem;
@@ -400,6 +405,12 @@ footer .footer__copymark {
   background-color: var(--white);
   color: var(--dark-500);
 }
+#surveyElement input {
+  border: 0px;
+}
+#surveyElement input:focus, #surveyElement input.active {
+  outline: none;
+}
 #surveyElement input.sv-text {
   border: 0px;
   border-bottom: 1px solid var(--grey-75);
@@ -409,16 +420,95 @@ footer .footer__copymark {
   padding: 0.4rem;
 }
 #surveyElement input.sv-text:focus, #surveyElement input.sv-text.active {
-  outline: none;
   border-bottom: 1px solid var(--grey-300);
 }
 #surveyElement input.sv-text:focus.sv-text--error, #surveyElement input.sv-text.active.sv-text--error {
   border-bottom: 1px solid var(--red);
 }
+#surveyElement input::-moz-placeholder {
+  color: rgba(46, 46, 46, 0.5);
+}
+#surveyElement input::placeholder {
+  color: rgba(46, 46, 46, 0.5);
+}
 #surveyElement input.sv-text--error {
   border-bottom: 1px solid var(--red);
   margin-top: 0.8rem;
+  color: #000000;
 }
 #surveyElement .sv-question__erbox {
   color: var(--red);
+}
+#surveyElement .sv-page {
+  margin: 0;
+  width: 100%;
+  display: block;
+}
+#surveyElement .sv-description {
+  padding-left: 0;
+}
+#surveyElement #sp_100 .sv-page {
+  float: left;
+}
+#surveyElement #sp_100 .sv-page .sv-description {
+  width: 50%;
+  float: left;
+}
+#surveyElement #sp_100 .sv-page .sv-row {
+  width: 50%;
+  float: right;
+  padding-bottom: 0;
+}
+#surveyElement #sp_100 .sv-action-bar {
+  width: 50%;
+  margin-left: auto;
+  justify-content: center;
+  padding: 0;
+  margin-right: 0;
+}
+#surveyElement #sp_100 .sv-action-bar .sv-action__content {
+  padding-right: 0;
+}
+#surveyElement #sp_101 .modal__tit {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--black);
+}
+#surveyElement #sp_101 .modal__sub {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+#surveyElement #sp_101 .modal__sub svg {
+  animation: rotate 1s linear infinite;
+}
+#surveyElement #sp_101 .chatbot__basic__details {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+  color: var(--black);
+}
+#surveyElement #sp_101 .sv-action-bar {
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+#surveyElement #sp_101 .sv-dropdown {
+  padding-left: 0rem;
+}
+#surveyElement .sv-list__item--selected {
+  background-color: var(--dark-500);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=main.css.map */
